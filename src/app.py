@@ -54,7 +54,7 @@ def login():
     if (not result):
         return make_response(jsonify('invalid userId or password'), 404)
      
-    return make_response(json.dumps({}, ensure_ascii=False))
+    return make_response(jsonify({'result': 'success'}))
 
 
 # @app.route(LOGOUT_URL)
