@@ -9,5 +9,5 @@ pip install pytest
 
 ## start app
 cd src  
-python3 src/app.py  
+python3 app.py  
 
