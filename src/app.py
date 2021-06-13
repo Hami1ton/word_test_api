@@ -64,13 +64,13 @@ def login():
 #     return redirect(url_for('login'))
 
 
-# @app.route(WORD_TEST_URL)
-# def start_test():
-#     # TODO 問題数を変えられるようにしたい
-#     # problem_listは[[英単語,[選択肢1, 2, 3]], [], [],...,[]]で指定
-#     creator = ProblemsCreator(NUMBER_OF_QUESTIONS)
-#     session["problem_list"] = creator.create_question_list()
-#     return render_template('start_test.html', problem_list=session["problem_list"])
+@app.route(WORD_TEST_URL, methods=['GET'])
+def start_test():
+    # TODO 問題数を変えられるようにしたい
+    # problem_listは、[id, 英単語,[選択肢1, 2, 3]]のリスト
+    creator = ProblemsCreator(NUMBER_OF_QUESTIONS)
+    result = creator.create_question_list()
+    return make_response(jsonify(result))
 
 
 # @app.route(TEST_RESULT_URL, methods=['POST'])
