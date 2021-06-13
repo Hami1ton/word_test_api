@@ -12,7 +12,7 @@ class ProblemsCreator:
 
     # [id, 英単語, その意味]を要素とするリストから問題を作成する。
     def create_question_list(self):
-        meaning_random_list = [word_and_meaning[1] for word_and_meaning in self.words_and_meanings]
+        meaning_random_list = [word_and_meaning[2] for word_and_meaning in self.words_and_meanings]
         # 問題数分だけランダムな数字を取得
         problem_number_list = random.sample([i for i in range(len(self.words_and_meanings))], self.number_of_questions)
         # 問題にする(id, 英単語, 意味)のリスト
