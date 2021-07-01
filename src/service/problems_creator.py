@@ -1,6 +1,6 @@
 import random
 
-from flask import session, g
+from flask import g
 
 
 class ProblemsCreator:
