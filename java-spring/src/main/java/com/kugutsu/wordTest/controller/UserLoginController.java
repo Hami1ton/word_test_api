@@ -9,8 +9,6 @@ public class UserLoginController {
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public UserLoginResponse login(@RequestBody UserLoginRequest request) {
-        System.out.println(request.getUserId());
-        System.out.println(request.getPassword());
 
         UserLoginResponse res = new UserLoginResponse();
         res.setResult("success");
