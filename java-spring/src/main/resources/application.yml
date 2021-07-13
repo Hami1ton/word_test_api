@@ -1,6 +1,10 @@
 spring:
   datasource:
+    initialization–mode: always
     driver-class-name: org.h2.Driver
     url: jdbc:h2:mem:testdb;MODE=MySQL;
     username: username
     password:
+
+server:
+  port: 5000
