@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 
 
 @Repository
-public interface VocabularyBookRepository extends CrudRepository<VocabularyBook, Integer> {
+public interface VocabularyBookRepository extends CrudRepository<VocabularyBook, String> {
 
 }
