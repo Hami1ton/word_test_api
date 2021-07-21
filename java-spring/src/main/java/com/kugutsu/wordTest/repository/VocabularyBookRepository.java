@@ -18,4 +18,11 @@ public interface VocabularyBookRepository extends CrudRepository<VocabularyBook,
     @Query("SELECT * FROM VOCABULARY_BOOK ORDER BY RAND() LIMIT 15")
     List<VocabularyBook> get15VBooksEntity();
 
+    /*
+     * 英単語IDで検索
+     *
+     * */
+    @Query("SELECT * FROM VOCABULARY_BOOK WHERE ID = :eWordId")
+    VocabularyBook getVBooksByWordId(String eWordId);
+
 }
