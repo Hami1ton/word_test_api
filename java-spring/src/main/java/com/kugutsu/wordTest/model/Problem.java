@@ -1,4 +1,4 @@
-package com.kugutsu.wordTest.dto;
+package com.kugutsu.wordTest.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

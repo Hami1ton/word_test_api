@@ -1,6 +1,6 @@
 package com.kugutsu.wordTest.service;
 
-import com.kugutsu.wordTest.dto.Problem;
+import com.kugutsu.wordTest.model.Problem;
 import com.kugutsu.wordTest.entity.VocabularyBook;
 import com.kugutsu.wordTest.repository.VocabularyBookRepository;
 import org.springframework.stereotype.Service;

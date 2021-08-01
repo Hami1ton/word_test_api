@@ -1,6 +1,6 @@
 package com.kugutsu.wordTest.controller;
 
-import com.kugutsu.wordTest.dto.Problem;
+import com.kugutsu.wordTest.model.Problem;
 import com.kugutsu.wordTest.service.ProblemService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
