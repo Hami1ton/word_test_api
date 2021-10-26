@@ -1,6 +1,5 @@
-package com.kugutsu.wordTest.model;
+package com.kugutsu.wordTest.domain.model;
 
-import com.kugutsu.wordTest.entity.VocabularyBook;
 import lombok.AllArgsConstructor;
 import java.util.ArrayList;
 import java.util.Collections;

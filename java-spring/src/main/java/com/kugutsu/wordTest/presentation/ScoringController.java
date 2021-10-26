@@ -1,13 +1,11 @@
-package com.kugutsu.wordTest.controller;
+package com.kugutsu.wordTest.presentation;
 
 import com.kugutsu.wordTest.dto.request.ScoringRequest;
-import com.kugutsu.wordTest.service.ScoringService;
+import com.kugutsu.wordTest.application.service.ScoringService;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.Map;
 
 @RestController
 public class ScoringController {

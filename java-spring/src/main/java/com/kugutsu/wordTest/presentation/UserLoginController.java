@@ -1,4 +1,4 @@
-package com.kugutsu.wordTest.controller;
+package com.kugutsu.wordTest.presentation;
 
 import com.kugutsu.wordTest.dto.request.UserLoginRequest;
 import com.kugutsu.wordTest.dto.response.UserLoginResponse;

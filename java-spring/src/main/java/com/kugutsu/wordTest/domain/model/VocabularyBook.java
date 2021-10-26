@@ -1,4 +1,4 @@
-package com.kugutsu.wordTest.entity;
+package com.kugutsu.wordTest.domain.model;
 
 import lombok.Getter;
 import org.springframework.data.annotation.Id;

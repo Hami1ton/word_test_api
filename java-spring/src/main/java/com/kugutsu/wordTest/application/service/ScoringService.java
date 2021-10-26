@@ -1,4 +1,4 @@
-package com.kugutsu.wordTest.service;
+package com.kugutsu.wordTest.application.service;
 
 import com.kugutsu.wordTest.repository.VocabularyBookRepository;
 import org.springframework.stereotype.Service;

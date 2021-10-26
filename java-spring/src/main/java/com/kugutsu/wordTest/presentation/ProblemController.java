@@ -1,7 +1,7 @@
-package com.kugutsu.wordTest.controller;
+package com.kugutsu.wordTest.presentation;
 
-import com.kugutsu.wordTest.model.Problem;
-import com.kugutsu.wordTest.service.ProblemService;
+import com.kugutsu.wordTest.domain.model.Problem;
+import com.kugutsu.wordTest.application.service.ProblemService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
