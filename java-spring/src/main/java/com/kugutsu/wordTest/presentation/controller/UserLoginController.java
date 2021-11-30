@@ -1,7 +1,7 @@
-package com.kugutsu.wordTest.presentation;
+package com.kugutsu.wordTest.presentation.controller;
 
-import com.kugutsu.wordTest.dto.request.UserLoginRequest;
-import com.kugutsu.wordTest.dto.response.UserLoginResponse;
+import com.kugutsu.wordTest.presentation.dto.request.UserLoginRequest;
+import com.kugutsu.wordTest.presentation.dto.response.UserLoginResponse;
 import org.springframework.web.bind.annotation.*;
 
 @RestController

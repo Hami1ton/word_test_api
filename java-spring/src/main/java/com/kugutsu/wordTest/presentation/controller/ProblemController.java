@@ -1,4 +1,4 @@
-package com.kugutsu.wordTest.presentation;
+package com.kugutsu.wordTest.presentation.controller;
 
 import com.kugutsu.wordTest.domain.model.Problem;
 import com.kugutsu.wordTest.application.service.ProblemService;

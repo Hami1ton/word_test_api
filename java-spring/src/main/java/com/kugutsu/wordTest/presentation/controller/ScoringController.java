@@ -1,6 +1,6 @@
-package com.kugutsu.wordTest.presentation;
+package com.kugutsu.wordTest.presentation.controller;
 
-import com.kugutsu.wordTest.dto.request.ScoringRequest;
+import com.kugutsu.wordTest.presentation.dto.request.ScoringRequest;
 import com.kugutsu.wordTest.application.service.ScoringService;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

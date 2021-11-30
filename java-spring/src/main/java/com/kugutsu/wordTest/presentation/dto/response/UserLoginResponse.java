@@ -1,4 +1,4 @@
-package com.kugutsu.wordTest.dto.response;
+package com.kugutsu.wordTest.presentation.dto.response;
 
 import lombok.Data;
 
