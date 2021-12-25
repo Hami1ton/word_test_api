@@ -1,4 +1,4 @@
-package com.kugutsu.wordTest.config;
+package com.kugutsu.wordTest._config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;

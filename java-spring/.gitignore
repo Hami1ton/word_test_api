@@ -29,3 +29,6 @@ target
 out
 build
 bin
+
+# Domain Model
+model

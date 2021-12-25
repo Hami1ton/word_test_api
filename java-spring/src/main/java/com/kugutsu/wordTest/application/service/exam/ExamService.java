@@ -1,27 +1,28 @@
-package com.kugutsu.wordTest.application.service;
+package com.kugutsu.wordTest.application.service.exam;
 
+import com.kugutsu.wordTest.domain.model.VocabularyBook;
 import com.kugutsu.wordTest.domain.model.problem.FiveProblems;
 import com.kugutsu.wordTest.domain.model.problem.Problem;
-import com.kugutsu.wordTest.domain.model.VocabularyBook;
 import com.kugutsu.wordTest.domain.repository.VocabularyBookRepository;
 import org.springframework.stereotype.Service;
+
 import java.util.List;
 
+
 @Service
-public class ProblemService {
+public class ExamService {
 
     private final VocabularyBookRepository vBookRepository;
 
-    public ProblemService(VocabularyBookRepository vBookRepository) {
+    public ExamService(VocabularyBookRepository vBookRepository) {
         this.vBookRepository = vBookRepository;
     }
 
-
     /*
-     * 問題のリスト(要素数5)を作成する
+     * 問題のリストを作成する
      *
      * */
-    public List<Problem> makeProblems() {
+    public List<Problem> takeExam() {
         // 単語帳からタンダムに15個の単語を取得する
         List<VocabularyBook> vBooksOf15 = vBookRepository.get15VBooksEntity();
 
@@ -35,5 +36,4 @@ public class ProblemService {
 
         return problems.getList();
     }
-
 }
