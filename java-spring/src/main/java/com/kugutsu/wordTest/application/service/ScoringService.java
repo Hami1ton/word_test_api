@@ -1,6 +1,6 @@
 package com.kugutsu.wordTest.application.service;
 
-import com.kugutsu.wordTest.domain.repository.VocabularyBookRepository;
+import com.kugutsu.wordTest.application.service.vocabularyBook.VocabularyBookRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.Map;

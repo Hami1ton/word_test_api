@@ -2,8 +2,8 @@ package com.kugutsu.wordTest.application.service;
 
 import com.kugutsu.wordTest.domain.model.problem.FiveProblems;
 import com.kugutsu.wordTest.domain.model.problem.Problem;
-import com.kugutsu.wordTest.domain.model.VocabularyBook;
-import com.kugutsu.wordTest.domain.repository.VocabularyBookRepository;
+import com.kugutsu.wordTest.domain.model.vocabularyBook.VocabularyBook;
+import com.kugutsu.wordTest.application.service.vocabularyBook.VocabularyBookRepository;
 import org.springframework.stereotype.Service;
 import java.util.List;
 

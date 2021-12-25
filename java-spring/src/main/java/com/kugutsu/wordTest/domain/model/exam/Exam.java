@@ -1,10 +1,28 @@
 package com.kugutsu.wordTest.domain.model.exam;
 
-import com.kugutsu.wordTest.domain.model.problem.Problem;
+import java.util.Collections;
 import java.util.List;
 
-
+/**
+ * 試験
+ */
 public class Exam {
 
-    List<Problem> problems;
+    List<Mondai> mondaiList;
+
+    public Exam(List<Mondai> mondaiList) {
+        this.mondaiList = mondaiList;
+    }
+
+    public List<Mondai> getMondaiList() {
+        return Collections.unmodifiableList(mondaiList);
+    }
+
+    @Override
+    public String toString() {
+        return "Exam{" +
+                "問題=" + mondaiList +
+                '}';
+    }
+
 }
