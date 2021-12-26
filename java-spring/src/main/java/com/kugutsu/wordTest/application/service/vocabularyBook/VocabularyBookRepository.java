@@ -12,18 +12,11 @@ import java.util.List;
 public interface VocabularyBookRepository extends CrudRepository<VocabularyBook, String> {
 
     /*
-     * 単語帳からタンダムに15個の単語を取得し、Entityクラスのリストとして返す
+     * 単語帳からタンダムに 指定数 個の単語を取得し、Entityクラスのリストとして返す
      *
      * */
-    @Query("SELECT * FROM VOCABULARY_BOOK ORDER BY RAND() LIMIT 3")
-    List<VocabularyBook> get3VBooksEntity();
-
-    /*
-     * 単語帳からタンダムに15個の単語を取得し、Entityクラスのリストとして返す
-     *
-     * */
-    @Query("SELECT * FROM VOCABULARY_BOOK ORDER BY RAND() LIMIT 15")
-    List<VocabularyBook> get15VBooksEntity();
+    @Query("SELECT * FROM VOCABULARY_BOOK ORDER BY RAND() LIMIT :num")
+    List<VocabularyBook> getSpecifiedNumberVBooks(int num);
 
     /*
      * 英単語IDで検索
