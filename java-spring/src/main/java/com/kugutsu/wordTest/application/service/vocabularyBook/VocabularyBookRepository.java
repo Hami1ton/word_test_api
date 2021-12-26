@@ -15,6 +15,13 @@ public interface VocabularyBookRepository extends CrudRepository<VocabularyBook,
      * 単語帳からタンダムに15個の単語を取得し、Entityクラスのリストとして返す
      *
      * */
+    @Query("SELECT * FROM VOCABULARY_BOOK ORDER BY RAND() LIMIT 3")
+    List<VocabularyBook> get3VBooksEntity();
+
+    /*
+     * 単語帳からタンダムに15個の単語を取得し、Entityクラスのリストとして返す
+     *
+     * */
     @Query("SELECT * FROM VOCABULARY_BOOK ORDER BY RAND() LIMIT 15")
     List<VocabularyBook> get15VBooksEntity();
 

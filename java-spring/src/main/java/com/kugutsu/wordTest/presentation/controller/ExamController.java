@@ -1,7 +1,7 @@
 package com.kugutsu.wordTest.presentation.controller;
 
 import com.kugutsu.wordTest.application.service.exam.ExamService;
-import com.kugutsu.wordTest.domain.model.problem.Problem;
+import com.kugutsu.wordTest.domain.model.exam.Mondai;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -17,8 +17,8 @@ public class ExamController {
     }
 
     @GetMapping(value = "/problems")
-    public List<Problem> takeExam() {
-        List<Problem> res = service.takeExam();
+    public List<Mondai> takeExam() {
+        List<Mondai> res = service.takeExam();
         return res;
     }
 }
