@@ -24,6 +24,7 @@ dependencies {
 	compileOnly 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	annotationProcessor 'org.projectlombok:lombok'
+	implementation 'commons-validator:commons-validator:1.7'
 
 	// swagger
 	implementation "io.springfox:springfox-boot-starter:3.0.0"
