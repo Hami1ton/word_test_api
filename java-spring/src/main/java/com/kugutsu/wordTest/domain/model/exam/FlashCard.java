@@ -18,4 +18,12 @@ public class FlashCard {
         this.meaning = meaning;
     }
 
+    @Override
+    public String toString() {
+        return "Mondai{" +
+                "英単語=" + word + "," +
+                "意味" + meaning +
+                '}';
+    }
+
 }

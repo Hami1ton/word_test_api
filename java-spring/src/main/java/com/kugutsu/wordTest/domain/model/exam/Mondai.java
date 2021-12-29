@@ -24,4 +24,14 @@ public class Mondai {
     /* 選択肢3 */
     private String choice3;
 
+
+    @Override
+    public String toString() {
+        return "Mondai{" +
+                "英単語=" + word + "," +
+                "選択肢1" + choice1 + "," +
+                "選択肢2" + choice2 + "," +
+                "選択肢3" + choice3 +
+                '}';
+    }
 }

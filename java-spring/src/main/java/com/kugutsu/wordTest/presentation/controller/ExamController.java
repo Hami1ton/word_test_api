@@ -16,7 +16,7 @@ public class ExamController {
         this.service = service;
     }
 
-    @GetMapping(value = "/problems")
+    @GetMapping(value = "/takeExam")
     public List<Mondai> takeExam() {
         List<Mondai> res = service.takeExam();
         return res;
