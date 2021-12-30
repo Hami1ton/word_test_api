@@ -1,5 +1,7 @@
 package com.kugutsu.wordTest.domain.model.examResult;
 
+import lombok.Getter;
+
 import java.util.List;
 
 /**
@@ -11,16 +13,33 @@ public class ExamResult {
 
     private String userId;
 
-    private int score;
+    @Getter
+    private final int score;
 
-    private List<ClientAnswer> answers;
+    private List<ClientAnswer> clientAnswerList;
+
+    public ExamResult(String userId, List<ClientAnswer> clientAnswerList) {
+        uuid();
+        this.userId = userId;
+        this.clientAnswerList = clientAnswerList;
+        this.score = score();
+    }
+
+    private void uuid() {
+        this.id = "";
+    }
+
+    private int score() {
+        return 0;
+    }
 
     @Override
     public String toString() {
         return "ClientAnswer{" +
                 "id=" + id + "," +
                 "userId=" + userId + "," +
-                "回答=" + score + "," +
+                "スコア=" + score + "," +
+                "回答=" + clientAnswerList +
                 '}';
     }
 }
