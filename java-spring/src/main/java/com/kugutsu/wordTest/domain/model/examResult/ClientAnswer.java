@@ -1,10 +1,12 @@
 package com.kugutsu.wordTest.domain.model.examResult;
 
+import lombok.Getter;
 import org.apache.commons.validator.*;
 
 /**
  * 回答
  */
+@Getter
 public class ClientAnswer {
 
     private String word;

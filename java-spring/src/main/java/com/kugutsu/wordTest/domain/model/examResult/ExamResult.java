@@ -3,6 +3,7 @@ package com.kugutsu.wordTest.domain.model.examResult;
 import lombok.Getter;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * 試験結果
@@ -13,15 +14,19 @@ public class ExamResult {
 
     private String userId;
 
+    private List<ClientAnswer> clientAnswerList;
+
+    private Map<String, String> correctAnswerMap;
+
     @Getter
     private final int score;
 
-    private List<ClientAnswer> clientAnswerList;
-
-    public ExamResult(String userId, List<ClientAnswer> clientAnswerList) {
+    public ExamResult(String userId, List<ClientAnswer> clientAnswerList
+    , Map<String, String> correctAnswerMap) {
         uuid();
         this.userId = userId;
         this.clientAnswerList = clientAnswerList;
+        this.correctAnswerMap = correctAnswerMap;
         this.score = score();
     }
 
@@ -30,7 +35,16 @@ public class ExamResult {
     }
 
     private int score() {
-        return 0;
+        int result = 0;
+        for(ClientAnswer clientAnswer : clientAnswerList) {
+            String word = clientAnswer.getWord();
+            String selectedMeaning = clientAnswer.getSelectedMeaning();
+            String correctMeaning = correctAnswerMap.get(word);
+            if (selectedMeaning.equals(correctMeaning)) {
+                result += 1;
+            }
+        }
+        return result;
     }
 
     @Override
