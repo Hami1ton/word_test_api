@@ -16,6 +16,10 @@ public class ExamResultService {
 
     VocabularyBookRepository vocabularyBookRepository;
 
+    public ExamResultService(VocabularyBookRepository vocabularyBookRepository) {
+        this.vocabularyBookRepository = vocabularyBookRepository;
+    }
+
     public int score(Map<String, String> answers) {
         // 結果生成
         List<ClientAnswer> clientAnswerList = convertToClientAnswer(answers);
