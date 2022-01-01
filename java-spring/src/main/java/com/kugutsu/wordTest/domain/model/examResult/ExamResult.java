@@ -37,9 +37,9 @@ public class ExamResult {
     private int score() {
         int result = 0;
         for(ClientAnswer clientAnswer : clientAnswerList) {
-            String word = clientAnswer.getWord();
+            String id = clientAnswer.getId();
             String selectedMeaning = clientAnswer.getSelectedMeaning();
-            String correctMeaning = correctAnswerMap.get(word);
+            String correctMeaning = correctAnswerMap.get(id);
             if (selectedMeaning.equals(correctMeaning)) {
                 result += 1;
             }

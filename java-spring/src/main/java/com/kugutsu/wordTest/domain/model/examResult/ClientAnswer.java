@@ -9,19 +9,19 @@ import org.apache.commons.validator.*;
 @Getter
 public class ClientAnswer {
 
-    private String word;
+    private String id;
 
     private String selectedMeaning;
 
-    public ClientAnswer(String word, String selectedMeaning) {
-        nullCheck(word, selectedMeaning);
-        this.word = word;
+    public ClientAnswer(String id, String selectedMeaning) {
+        nullCheck(id, selectedMeaning);
+        this.id = id;
         this.selectedMeaning = selectedMeaning;
     }
 
-    private void nullCheck(String word, String selectedMeaning) {
+    private void nullCheck(String id, String selectedMeaning) {
         // TODO ドメインプリミティブにする
-        if (GenericValidator.isBlankOrNull(word) ||
+        if (GenericValidator.isBlankOrNull(id) ||
                 GenericValidator.isBlankOrNull(selectedMeaning)) {
             throw new IllegalArgumentException();
         }
@@ -30,7 +30,7 @@ public class ClientAnswer {
     @Override
     public String toString() {
         return "ClientAnswer{" +
-                "英単語=" + word + "," +
+                "id=" + id + "," +
                 "回答=" + selectedMeaning +
                 '}';
     }

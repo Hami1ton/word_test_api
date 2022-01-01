@@ -25,10 +25,4 @@ public interface VocabularyBookRepository extends CrudRepository<VocabularyBook,
     @Query("SELECT * FROM VOCABULARY_BOOK WHERE ID = :eWordId")
     VocabularyBook getVBooksByWordId(String eWordId);
 
-    /*
-     * 英単語リストからVOCABULARY_BOOKを抽出
-     * */
-    @Query("SELECT * FROM VOCABULARY_BOOK WHERE WORD = :wordList")
-    List<VocabularyBook> getVBooksByWordList(List<String> wordList);
-
 }

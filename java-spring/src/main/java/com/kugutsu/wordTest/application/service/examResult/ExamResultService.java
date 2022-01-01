@@ -39,13 +39,17 @@ public class ExamResultService {
         return list;
     }
 
+    /**
+     * <id, 正解>のMapを生成
+     * */
     private Map<String, String> correctAnswerMap(Map<String, String> answers) {
         Map<String, String> correctAnswerMap = new HashMap<>();
-        List<String> wordList = new ArrayList<>(answers.keySet());
+        List<String> wordIdList = new ArrayList<>(answers.keySet());
 
-        List<VocabularyBook> vBookList = vocabularyBookRepository.getVBooksByWordList(wordList);
+        List<VocabularyBook> vBookList
+                = (List<VocabularyBook>) vocabularyBookRepository.findAllById(wordIdList);
         for(VocabularyBook vBook : vBookList) {
-            correctAnswerMap.put(vBook.getWord(), vBook.getMeaning());
+            correctAnswerMap.put(vBook.getId(), vBook.getMeaning());
         }
 
         return correctAnswerMap;
