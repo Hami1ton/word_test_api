@@ -9,11 +9,14 @@ import lombok.Getter;
 @Getter
 public class FlashCard {
 
+    private String id;
+
     private String word;
 
     private String meaning;
 
-    public FlashCard(String word, String meaning){
+    public FlashCard(String id, String word, String meaning){
+        this.id = id;
         this.word = word;
         this.meaning = meaning;
     }
@@ -21,6 +24,7 @@ public class FlashCard {
     @Override
     public String toString() {
         return "Mondai{" +
+                "id=" + id + "," +
                 "英単語=" + word + "," +
                 "意味" + meaning +
                 '}';

@@ -37,7 +37,7 @@ public class MondaiListFactory {
     }
 
     private static FlashCard convertVocabularyBookToFlashCard(VocabularyBook book) {
-        FlashCard card = new FlashCard(book.getWord(), book.getMeaning());
+        FlashCard card = new FlashCard(book.getId(), book.getWord(), book.getMeaning());
         return card;
     }
 

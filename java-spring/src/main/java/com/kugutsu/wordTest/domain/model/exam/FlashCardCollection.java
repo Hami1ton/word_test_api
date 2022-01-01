@@ -15,6 +15,7 @@ public class FlashCardCollection {
     }
 
     public Mondai createMondai() {
+        String id = flashCardList.get(0).getId();
         String word = flashCardList.get(0).getWord();
         String meaning = flashCardList.get(0).getMeaning();
         String bluff1 = flashCardList.get(1).getMeaning();
@@ -40,6 +41,6 @@ public class FlashCardCollection {
             choice3 = meaning;
         }
 
-        return new Mondai(word, choice1, choice2, choice3);
+        return new Mondai(id, word, choice1, choice2, choice3);
     }
 }
