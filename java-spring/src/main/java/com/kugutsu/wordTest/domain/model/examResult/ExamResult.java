@@ -1,7 +1,6 @@
 package com.kugutsu.wordTest.domain.model.examResult;
 
 import lombok.Getter;
-
 import java.util.List;
 import java.util.Map;
 
@@ -10,8 +9,10 @@ import java.util.Map;
  */
 public class ExamResult {
 
+    @Getter
     private String id;
 
+    @Getter
     private String userId;
 
     private List<ClientAnswer> clientAnswerList;
@@ -31,7 +32,7 @@ public class ExamResult {
     }
 
     private void uuid() {
-        this.id = "";
+        this.id = "1";
     }
 
     private int score() {

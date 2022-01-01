@@ -1,4 +1,4 @@
-package com.kugutsu.wordTest.domain.model.vocabularyBook;
+package com.kugutsu.wordTest.dataSource.vocabularyBook;
 
 import lombok.Getter;
 import org.springframework.data.annotation.Id;

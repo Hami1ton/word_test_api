@@ -1,10 +1,12 @@
 package com.kugutsu.wordTest.application.service.examResult;
 
 import com.kugutsu.wordTest.application.service.vocabularyBook.VocabularyBookRepository;
+import com.kugutsu.wordTest.dataSource.examResult.ExamResultDataSource;
 import com.kugutsu.wordTest.domain.model.examResult.ClientAnswer;
 import com.kugutsu.wordTest.domain.model.examResult.ExamResult;
-import com.kugutsu.wordTest.domain.model.vocabularyBook.VocabularyBook;
+import com.kugutsu.wordTest.dataSource.vocabularyBook.VocabularyBook;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -16,8 +18,12 @@ public class ExamResultService {
 
     VocabularyBookRepository vocabularyBookRepository;
 
-    public ExamResultService(VocabularyBookRepository vocabularyBookRepository) {
+    ExamResultRepository examResultRepository;
+
+    public ExamResultService(VocabularyBookRepository vocabularyBookRepository
+    , ExamResultRepository examResultRepository) {
         this.vocabularyBookRepository = vocabularyBookRepository;
+        this.examResultRepository = examResultRepository;
     }
 
     public int score(Map<String, String> answers) {
@@ -27,6 +33,7 @@ public class ExamResultService {
 
         // 永続化
         ExamResult result = new ExamResult("userId", clientAnswerList, correctAnswerMap);
+        saveExamResult(result);
 
         // スコア返却
         return result.getScore();
@@ -58,4 +65,16 @@ public class ExamResultService {
 
         return correctAnswerMap;
     }
+
+    @Transactional
+    private void saveExamResult(ExamResult result) {
+        ExamResultDataSource examResultDataSource
+                = convertToExamResultDataSource(result);
+        examResultRepository.save(examResultDataSource);
+    }
+
+    private ExamResultDataSource convertToExamResultDataSource(ExamResult examResult) {
+        return new ExamResultDataSource(examResult.getId(), examResult.getUserId(), examResult.getScore());
+    }
+
 }

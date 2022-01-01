@@ -4,7 +4,7 @@ import com.kugutsu.wordTest.application.service.vocabularyBook.VocabularyBookRep
 import com.kugutsu.wordTest.domain.model.exam.FlashCard;
 import com.kugutsu.wordTest.domain.model.exam.FlashCardCollection;
 import com.kugutsu.wordTest.domain.model.exam.Mondai;
-import com.kugutsu.wordTest.domain.model.vocabularyBook.VocabularyBook;
+import com.kugutsu.wordTest.dataSource.vocabularyBook.VocabularyBook;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
