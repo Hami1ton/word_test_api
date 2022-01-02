@@ -3,6 +3,7 @@ package com.kugutsu.wordTest.domain.model.examResult;
 import lombok.Getter;
 import java.util.List;
 import java.util.Map;
+import java.util.UUID;
 
 /**
  * 試験結果
@@ -32,7 +33,7 @@ public class ExamResult {
     }
 
     private void uuid() {
-        this.id = "1";
+        this.id = UUID.randomUUID().toString();
     }
 
     private int score() {
