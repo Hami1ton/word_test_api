@@ -28,7 +28,7 @@ public class ExamController {
 
     @RequestMapping(value = "/scoreExam", method = RequestMethod.POST)
     public int scoreExam(@RequestBody ScoringRequest request) {
-        return examResultService.score(request.getAnswers());
+        return examResultService.score(request.getUserId(), request.getAnswers());
     }
 
 

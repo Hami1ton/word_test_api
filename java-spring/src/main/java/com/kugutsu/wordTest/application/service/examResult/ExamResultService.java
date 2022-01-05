@@ -26,13 +26,13 @@ public class ExamResultService {
         this.examResultRepository = examResultRepository;
     }
 
-    public int score(Map<String, String> answers) {
+    public int score(String userID, Map<String, String> answers) {
         // 結果生成
         List<ClientAnswer> clientAnswerList = convertToClientAnswer(answers);
         Map<String, String> correctAnswerMap = correctAnswerMap(answers);
 
         // 永続化
-        ExamResult result = new ExamResult("userId", clientAnswerList, correctAnswerMap);
+        ExamResult result = new ExamResult(userID, clientAnswerList, correctAnswerMap);
         saveExamResult(result);
 
         // スコア返却

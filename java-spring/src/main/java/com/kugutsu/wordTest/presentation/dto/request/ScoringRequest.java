@@ -7,6 +7,8 @@ import java.util.Map;
 @Data
 public class ScoringRequest {
 
+    private String userId;
+
     /* <wordId, 選択した意味> のMap */
     private Map<String, String> answers;
 
