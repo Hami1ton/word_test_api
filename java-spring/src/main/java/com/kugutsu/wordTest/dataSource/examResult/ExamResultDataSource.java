@@ -1,5 +1,6 @@
 package com.kugutsu.wordTest.dataSource.examResult;
 
+import lombok.Getter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.domain.Persistable;
 import org.springframework.data.relational.core.mapping.Table;
@@ -7,6 +8,7 @@ import org.springframework.data.relational.core.mapping.Table;
 /**
  * 試験結果(永続化用)
  */
+@Getter
 @Table("EXAM_RESULT")
 public class ExamResultDataSource implements Persistable<String> {
 

@@ -77,4 +77,7 @@ public class ExamResultService {
         return new ExamResultDataSource(examResult.getId(), examResult.getUserId(), examResult.getScore());
     }
 
+    public List<ExamResultDataSource> examResult(String userId) {
+        return examResultRepository.getExamResultByUserId(userId);
+    }
 }
