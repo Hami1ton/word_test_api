@@ -5,7 +5,7 @@ import com.kugutsu.wordTest.domain.model.vocabularyBook.VocabularyBookRepository
 import com.kugutsu.wordTest.dataSource.examResult.ExamResultDataSource;
 import com.kugutsu.wordTest.domain.model.examResult.ClientAnswer;
 import com.kugutsu.wordTest.domain.model.examResult.ExamResult;
-import com.kugutsu.wordTest.dataSource.vocabularyBook.VocabularyBook;
+import com.kugutsu.wordTest.dataSource.vocabularyBook.VocabularyBookDataSource;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -58,9 +58,9 @@ public class ExamResultService {
         Map<String, String> correctAnswerMap = new HashMap<>();
         List<String> wordIdList = new ArrayList<>(answers.keySet());
 
-        List<VocabularyBook> vBookList
-                = (List<VocabularyBook>) vocabularyBookRepository.findAllById(wordIdList);
-        for(VocabularyBook vBook : vBookList) {
+        List<VocabularyBookDataSource> vBookList
+                = (List<VocabularyBookDataSource>) vocabularyBookRepository.findAllById(wordIdList);
+        for(VocabularyBookDataSource vBook : vBookList) {
             correctAnswerMap.put(vBook.getId(), vBook.getMeaning());
         }
 

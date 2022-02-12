@@ -1,37 +1,36 @@
 package com.kugutsu.wordTest.dataSource.examResult;
 
 import lombok.Getter;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.domain.Persistable;
-import org.springframework.data.relational.core.mapping.Table;
+import lombok.NoArgsConstructor;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 
 /**
  * 試験結果(永続化用)
  */
+@Entity
 @Getter
-@Table("EXAM_RESULT")
-public class ExamResultDataSource implements Persistable<String> {
+@Table(name = "EXAM_RESULT")
+@NoArgsConstructor
+public class ExamResultDataSource{
 
     @Id
+    @Column(name = "ID")
     private String id;
 
+    @Column(name = "USER_ID")
     private String userId;
 
-    private final int score;
+    @Column(name = "SCORE")
+    private int score;
 
     public ExamResultDataSource(String id, String userId, int score) {
         this.id = id;
         this.userId = userId;
         this.score = score;
-    }
-
-    @Override
-    public String getId() {
-        return id;
-    }
-
-    @Override
-    public boolean isNew() {
-        return true;
     }
 }

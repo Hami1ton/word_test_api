@@ -4,7 +4,7 @@ import com.kugutsu.wordTest.domain.model.vocabularyBook.VocabularyBookRepository
 import com.kugutsu.wordTest.domain.model.exam.FlashCard;
 import com.kugutsu.wordTest.domain.model.exam.FlashCardCollection;
 import com.kugutsu.wordTest.domain.model.exam.Mondai;
-import com.kugutsu.wordTest.dataSource.vocabularyBook.VocabularyBook;
+import com.kugutsu.wordTest.dataSource.vocabularyBook.VocabularyBookDataSource;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -23,8 +23,8 @@ public class MondaiListFactory {
     }
 
     public static List<Mondai> createMondaiList() {
-        List<VocabularyBook> VocabularyBookList = repository.getSpecifiedNumberVBooks(numberOfMondai * 3);
-        List<FlashCard> flashCardList = VocabularyBookList.stream()
+        List<VocabularyBookDataSource> vocabularyBookDataSourceList = repository.getSpecifiedNumberVBooks(numberOfMondai * 3);
+        List<FlashCard> flashCardList = vocabularyBookDataSourceList.stream()
                 .map(book -> convertVocabularyBookToFlashCard(book))
                 .collect(Collectors.toList());
 
@@ -36,7 +36,7 @@ public class MondaiListFactory {
                 .collect(Collectors.toList());
     }
 
-    private static FlashCard convertVocabularyBookToFlashCard(VocabularyBook book) {
+    private static FlashCard convertVocabularyBookToFlashCard(VocabularyBookDataSource book) {
         FlashCard card = new FlashCard(book.getId(), book.getWord(), book.getMeaning());
         return card;
     }
