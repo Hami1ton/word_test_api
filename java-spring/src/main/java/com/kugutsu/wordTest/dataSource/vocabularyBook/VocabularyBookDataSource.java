@@ -1,7 +1,6 @@
 package com.kugutsu.wordTest.dataSource.vocabularyBook;
 
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
