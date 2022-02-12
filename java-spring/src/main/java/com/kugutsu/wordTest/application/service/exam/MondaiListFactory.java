@@ -1,6 +1,6 @@
 package com.kugutsu.wordTest.application.service.exam;
 
-import com.kugutsu.wordTest.application.service.vocabularyBook.VocabularyBookRepository;
+import com.kugutsu.wordTest.domain.model.vocabularyBook.VocabularyBookRepository;
 import com.kugutsu.wordTest.domain.model.exam.FlashCard;
 import com.kugutsu.wordTest.domain.model.exam.FlashCardCollection;
 import com.kugutsu.wordTest.domain.model.exam.Mondai;

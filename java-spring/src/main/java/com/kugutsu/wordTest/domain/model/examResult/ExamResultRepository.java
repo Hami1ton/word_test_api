@@ -1,4 +1,4 @@
-package com.kugutsu.wordTest.application.service.examResult;
+package com.kugutsu.wordTest.domain.model.examResult;
 
 import com.kugutsu.wordTest.dataSource.examResult.ExamResultDataSource;
 import org.springframework.data.jdbc.repository.query.Query;

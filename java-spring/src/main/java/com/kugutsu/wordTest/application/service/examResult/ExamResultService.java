@@ -1,6 +1,7 @@
 package com.kugutsu.wordTest.application.service.examResult;
 
-import com.kugutsu.wordTest.application.service.vocabularyBook.VocabularyBookRepository;
+import com.kugutsu.wordTest.domain.model.examResult.ExamResultRepository;
+import com.kugutsu.wordTest.domain.model.vocabularyBook.VocabularyBookRepository;
 import com.kugutsu.wordTest.dataSource.examResult.ExamResultDataSource;
 import com.kugutsu.wordTest.domain.model.examResult.ClientAnswer;
 import com.kugutsu.wordTest.domain.model.examResult.ExamResult;

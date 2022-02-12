@@ -1,4 +1,4 @@
-package com.kugutsu.wordTest.application.service.vocabularyBook;
+package com.kugutsu.wordTest.domain.model.vocabularyBook;
 
 import com.kugutsu.wordTest.dataSource.vocabularyBook.VocabularyBook;
 import org.springframework.data.jdbc.repository.query.Query;
