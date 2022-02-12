@@ -11,6 +11,6 @@ import java.util.List;
 public interface ExamResultRepository  extends JpaRepository<ExamResultDataSource, String> {
 
     @Query(value = "SELECT * FROM EXAM_RESULT WHERE USER_ID = :userId", nativeQuery = true)
-    public List<ExamResultDataSource> getExamResultByUserId(String userId);
+    List<ExamResultDataSource> getExamResultByUserId(String userId);
 
 }

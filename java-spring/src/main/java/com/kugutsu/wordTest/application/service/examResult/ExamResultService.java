@@ -6,6 +6,7 @@ import com.kugutsu.wordTest.dataSource.examResult.ExamResultDataSource;
 import com.kugutsu.wordTest.domain.model.examResult.ClientAnswer;
 import com.kugutsu.wordTest.domain.model.examResult.ExamResult;
 import com.kugutsu.wordTest.dataSource.vocabularyBook.VocabularyBookDataSource;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -14,18 +15,13 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+@AllArgsConstructor
 @Service
 public class ExamResultService {
 
     VocabularyBookRepository vocabularyBookRepository;
 
     ExamResultRepository examResultRepository;
-
-    public ExamResultService(VocabularyBookRepository vocabularyBookRepository
-    , ExamResultRepository examResultRepository) {
-        this.vocabularyBookRepository = vocabularyBookRepository;
-        this.examResultRepository = examResultRepository;
-    }
 
     public int score(String userID, Map<String, String> answers) {
         // 結果生成
@@ -59,7 +55,7 @@ public class ExamResultService {
         List<String> wordIdList = new ArrayList<>(answers.keySet());
 
         List<VocabularyBookDataSource> vBookList
-                = (List<VocabularyBookDataSource>) vocabularyBookRepository.findAllById(wordIdList);
+                = vocabularyBookRepository.findAllById(wordIdList);
         for(VocabularyBookDataSource vBook : vBookList) {
             correctAnswerMap.put(vBook.getId(), vBook.getMeaning());
         }

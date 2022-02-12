@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
 @Service
 public class MondaiListFactory {
 
-    private static int numberOfMondai = 5;
+    private static final int numberOfMondai = 5;
 
     private static VocabularyBookRepository repository;
 
